@@ -1,10 +1,23 @@
-{% extends "layout.html" %} {% block content %}
+{% extends "layout.html" %}
+{% block content %}
 <div class="container">
   <h1 class="title">Click To Generate OTP</h1>
-  <button class="button">Get OTP</button>
+
+  {% if generatedOTP %}
+    <p>{{generatedOTP}}</p>
+  {% endif %}
+
+  <form method="GET" action="">
+      <button type='submit' class="button">Get OTP</button>
+  </form> 
+  <form method="POST" action="">
+      <button type='submit' class="button">RESET</button>
+  </form>
   <hr>
 </div>
-{% endblock content %} {% block form %}
+{% endblock content %} 
+
+{% block form %}
 <form method="POST" action="">
   {{ form.hidden_tag() }}
   <div>{{form.otp(placeholder='enter otp here', class='input')}}</div>
