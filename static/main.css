@@ -1,0 +1,30 @@
+.container {
+  width: 75vw;
+  margin: 0 auto;
+  height: auto;
+  text-align: center;
+}
+
+.title {
+  text-align: center;
+}
+
+.button {
+  width: 100px;
+  height: 40px;
+  outline: none;
+}
+
+form {
+  width: 75vw;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.input {
+  width: 300px;
+  height: 40px;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: large;
+}

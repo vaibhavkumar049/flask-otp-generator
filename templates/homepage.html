@@ -1,0 +1,13 @@
+{% extends "layout.html" %} {% block content %}
+<div class="container">
+  <h1 class="title">Click To Generate OTP</h1>
+  <button class="button">Get OTP</button>
+  <hr>
+</div>
+{% endblock content %} {% block form %}
+<form method="POST" action="">
+  {{ form.hidden_tag() }}
+  <div>{{form.otp(placeholder='enter otp here', class='input')}}</div>
+  {{form.submit(class='button')}}
+</form>
+{% endblock form %}
