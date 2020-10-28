@@ -7,7 +7,7 @@
     <p>{{generatedOTP}}</p>
   {% endif %}
 
-  <form method="GET" action="">
+  <form method="GET" action="/te">
       <button type='submit' class="button">Get OTP</button>
   </form> 
   <form method="POST" action="">
@@ -16,11 +16,11 @@
   <hr>
 </div>
 {% endblock content %} 
-
 {% block form %}
-<form method="POST" action="">
-  {{ form.hidden_tag() }}
-  <div>{{form.otp(placeholder='enter otp here', class='input')}}</div>
-  {{form.submit(class='button')}}
+<form method="POST" action="/te">
+<input type="text" name="otp" id="otp" class="otp"><br>
+<input type="text" name="prev" id="prev" class = "prev" value={{generatedOTP}} ><br>
+<input type="submit" value="Submit">
 </form>
-{% endblock form %}
+
+{% endblock %}

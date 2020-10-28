@@ -1,0 +1,9 @@
+{% block form %}
+<form method="POST" action="/te">
+  {{ form.hidden_tag() }}
+  <div>{{form.otp(placeholder='enter otp here', class='input')}}</div>
+  
+  <div><input id="prev" class = "prev" value={{generatedOTP}}> </div>
+  {{form.submit(class='button')}}
+</form>
+{% endblock form %}
